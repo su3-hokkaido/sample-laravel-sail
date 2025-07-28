@@ -1,6 +1,6 @@
 # 1: Overview
 
-This is a sample project with Laravel Sail
+This is a sample project with Laravel Sail created by @su3-hokkaido
 
 # 2: General Setup Guide
 
