@@ -16,5 +16,12 @@ brew install composer
 composer create-project laravel/laravel sample-laravel-sail
 ```
 
+# Install Sail
+
+```zsh
+php artisan sail:install
+```
+
+
 
 
