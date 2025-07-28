@@ -5,6 +5,10 @@ on:
     branches:
       - develop
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   d2m-pr:
     runs-on: ubuntu-latest
