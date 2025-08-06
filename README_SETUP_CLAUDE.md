@@ -35,3 +35,9 @@ Please refer to the official guide provided on the beginning of this page.
 - It is not allowed to retrieve `.mcp.json` from the repo, thus please duplicate `.mcp.json.sample` and rename to `.mcp.json`.
 - Before using the MCP server, please change ` "GITHUB_PERSONAL_ACCESS_TOKEN": "..."` to replace `...` with your Github PAT (PAT = Personal Access Token).
 - You can generate your PAT via [this PAT setting page](https://github.com/settings/tokens).
+
+
+## How to deny Claude run any dangerous commands
+
+- Please setup `.claude/settings.json`
+- Official guide is here: https://docs.anthropic.com/en/docs/claude-code/settings
