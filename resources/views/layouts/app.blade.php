@@ -16,10 +16,13 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="/css/color.css">
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @include('layouts.navigation')
+    <body class="font-sans antialiased common-background-color">
+        <div class="min-h-screen">
+            <!-- Common Header -->
+            @include('layouts.announce-header')
+            @include('layouts.global-header')
 
             <!-- Page Heading -->
             @isset($header)
@@ -35,5 +38,8 @@
                 {{ $slot }}
             </main>
         </div>
+
+        <!-- Footer -->
+         @include('layouts.footer')
     </body>
 </html>
