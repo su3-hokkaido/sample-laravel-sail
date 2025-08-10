@@ -13,4 +13,8 @@ class Recipe extends Model
     protected $fillable = [
         // Add your fillable fields here
     ];
+
+    protected $casts = [
+        'id' => 'uuid',
+    ];
 }
