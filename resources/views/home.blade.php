@@ -28,6 +28,14 @@
         </a>
       @endforeach
       <a href="" class="text-gray-600 block text-right">すべてのレシピを見る</a>
+    </div>
+    <div class="col-span-1 bg-gray ml-4">
+        <img src="/images/ad.png" alt="Advertisement">
+    </div>
+  </div>
+
+  <div class="grid grid-cols-4 mb-6">
+    <div class="col-span-3 bg-white rounded p-4">
       <h2 class="text-2xl font-bold mb-2">人気のレシピ</h2>
       <div class="flex justify-between items-start gap-4 mb-6">
         @foreach($popularRecipes as $popularRecipe)
@@ -46,8 +54,6 @@
       </div>
       <a href="" class="text-gray-600 block text-right">すべての人気のレシピを見る</a>  
     </div>
-    <div class="col-span-1 bg-gray ml-4">
-
-    </div>
-  </div>  
+    <div class="col-span-1"></div>
+  </div>
 </x-app-layout>
