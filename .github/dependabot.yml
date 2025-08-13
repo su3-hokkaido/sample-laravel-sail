@@ -9,7 +9,7 @@ updates:
       day: "wednesday"
       time: "07:00"
       timezone: "Asia/Tokyo"
-    reviewers:
+    assignees:
       - su3-hokkaido
     open-pull-requests-limit: 99
 
@@ -21,6 +21,6 @@ updates:
       day: "wednesday"
       time: "07:00"
       timezone: "Asia/Tokyo"
-    reviewers:
+    assignees:
       - su3-hokkaido
     open-pull-requests-limit: 99
