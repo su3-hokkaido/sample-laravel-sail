@@ -9,7 +9,7 @@
         },
         {
             "src": "/public/**",
-            "use": "vercel-php@0.7.3"
+            "use": "@vercel/static"
         }
     ],
     "routes": [
@@ -33,6 +33,7 @@
     "env": {
         "APP_NAME": "Laravel Vercel",
         "APP_DEBUG": "false",
+        "APP_URL": "https://sample-laravel-sail.vercel.app",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
