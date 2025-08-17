@@ -144,20 +144,32 @@ composer-require:
 
 # artisan commands
 # npm commands
-.PHONY: npm-install npm-install-package npm-run npm-list npm-outdated npm-update npm-update-package npm-version
+.PHONY: npm-install npm-upgrade-package npm-install-package npm-run npm-list npm-outdated npm-update npm-update-package npm-version
 npm-install:
 	./vendor/bin/sail npm install
 
+npm-upgrade-package:
+	@if [ -z "$(filter-out $@,$(MAKECMDGOALS))" ]; then \
+			echo "Usage: make npm-upgrade-package [package@version]"; \
+			echo "Example: make npm-upgrade-package vite@^7.1.2"; \
+			echo "Example: make npm-upgrade-package tailwindcss@^4.1.12"; \
+			echo "This will update both package.json and package-lock.json"; \
+	else \
+			./vendor/bin/sail npm install $(filter-out $@,$(MAKECMDGOALS)); \
+	fi
+
 npm-install-package:
 	@if [ -z "$(filter-out $@,$(MAKECMDGOALS))" ]; then \
-		echo "Usage: make npm-install [package_name]"; \
-		echo "Example: make npm-install vite"; \
+			echo "Usage: make npm-install-package [package@version]"; \
+			echo "Example: make npm-install-package vite@^7.1.2"; \
+			echo "Example: make npm-install-package tailwindcss@^4.1.12"; \
+			echo "Example: make npm-install-package vite (latest)"; \
 	else \
-		./vendor/bin/sail npm install $(filter_out $@,$(MAKECMDGOALS)); \
+			./vendor/bin/sail npm install $(filter-out $@,$(MAKECMDGOALS)); \
 	fi
 
 npm-run:
-	./vendor/bin/sail npm run $(filter-out $@,$(MAKECMDGOALS
+	./vendor/bin/sail npm run $(filter-out $@,$(MAKECMDGOALS))
 
 npm-list:
 	./vendor/bin/sail npm list
