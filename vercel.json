@@ -32,7 +32,6 @@
     ],
     "env": {
         "APP_NAME": "Laravel Vercel",
-        "APP_KEY": "base64:ICZnIwa00J6yKNQmq3oYrDdubQE6h5lh9t2CfTLUwYY=",
         "APP_DEBUG": "false",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
