@@ -18,15 +18,19 @@ help:
 	@echo "  make test          - Run PHPUnit tests"
 	@echo "  make queue-work    - Start queue worker"
 	@echo "  make ps            - Check Docker container status"
+	@echo "  make build					- Build Docker containers"
 	@echo "  make up            - Start Docker containers"
 	@echo "  make down          - Stop Docker containers"
 	@echo "  make restart       - Restart Docker containers"
 	@echo "  make exec [name]   - Execute bash in a running container"
 
 # Docker commands
-.PHONY: ps up down restart exec
+.PHONY: ps build up down restart exec
 ps:
 	./vendor/bin/sail ps
+
+build:
+	./vendor/bin/sail build
 
 up:
 	./vendor/bin/sail up -d
